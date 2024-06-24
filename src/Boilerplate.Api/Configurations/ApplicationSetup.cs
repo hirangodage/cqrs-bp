@@ -11,6 +11,7 @@ public static class ApplicationSetup
     public static IServiceCollection AddApplicationSetup(this IServiceCollection services)
     {
         services.AddScoped<IContext, ApplicationDbContext>();
+
         NewId.SetProcessIdProvider(new CurrentProcessIdProvider());
         
         return services;

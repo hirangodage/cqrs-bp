@@ -78,6 +78,6 @@ app.UseAuthorization();
 app.MapHeroEndpoints();
 app.MapGroup("api/identity")
     .WithTags("Identity")
-    .MapIdentityApi<ApplicationUser>();
+    .MapAuthApi<ApplicationUser>();
 
 await app.RunAsync();
